@@ -6,7 +6,7 @@
     <div class="navbar-nav">
         <%= link_to "Profile", root_path, class: "nav-item nav-link active" %>
         <%= link_to "Feed", root_path, class: "nav-item nav-link active" %>
-        <%= link_to "Upload Photo", root_path, class: "nav-item nav-link active" %>
+        <%= link_to "Upload Photo", new_post_path, class: "nav-item nav-link active" %>
         <%= link_to "Logout", destroy_user_session_path, class: "nav-item nav-link active", method: :delete  %>
     </div>
     </div>
