@@ -6,7 +6,10 @@ class ProfileController < ApplicationController
 
     private
     def set_avatar
-        @avatar = current_user.avatar
-        @avatar ||= "https://i.stack.imgur.com/34AD2.jpg"
+        if current_user.avatar
+            @avatar = current_user.avatar.image_url
+        else
+            @avatar ||= "https://i.stack.imgur.com/34AD2.jpg"
+        end
     end
 end
